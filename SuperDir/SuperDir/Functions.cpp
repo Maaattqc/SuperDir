@@ -1,0 +1,1 @@
+IFileInfo ** FindFiles(const char * aFolder);
