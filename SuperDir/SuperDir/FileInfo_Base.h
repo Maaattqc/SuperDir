@@ -1,4 +1,6 @@
 #pragma once
+#include "IFileInfo.h"
+
 class FileInfo_Base : public IFileInfo
 {
 
