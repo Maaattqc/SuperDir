@@ -1,4 +1,4 @@
 #pragma once
 class IFileInfo;
 
-IFileInfo ** FindFiles(const char* aFolder);
+extern IFileInfo** FindFiles(const char* aFolder);

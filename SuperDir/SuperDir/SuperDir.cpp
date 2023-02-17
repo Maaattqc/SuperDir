@@ -1,6 +1,14 @@
 #include <iostream>
+#include "Functions.h"
 
-int main()
+int main(int Count, const char** Vector)
 {
-    std::cout << "Hello World!\n";
+    if (Count < 2)
+    {
+        std::cerr << "Erreur passe un nom de repertoire\n";
+        return 1;
+    }
+
+    IFileInfo** Files =  FindFiles(Vector[1]);
+    return 0;
 }
