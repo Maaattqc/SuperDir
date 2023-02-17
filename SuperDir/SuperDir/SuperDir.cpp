@@ -1,3 +1,6 @@
+#include <assert.h>
+#include <stdint.h>
+#include <iomanip>
 #include <iostream>
 #include "Functions.h"
 
