@@ -4,14 +4,13 @@
 #include <iostream>
 #include "Functions.h"
 
-int main(int Count, const char** Vector)
+int main(int Count, const char** Param)
 {
-    if (Count < 2)
-    {
+    if (Count < 2){
         std::cerr << "Erreur passe un nom de repertoire\n";
-        return 1;
+        return 2;
     }
 
-    IFileInfo** Files =  FindFiles(Vector[1]);
+    IFileInfo** Files =  FindFiles(Param[1]);
     return 0;
 }

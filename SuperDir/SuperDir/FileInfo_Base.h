@@ -10,7 +10,7 @@ public:
     virtual void Init(const char* aFolder, const char* aFile);
 
 private:
-    std::string mFile;
-    std::string mFolder;
+    char mFile[256];
+    char mFolder[256];
 
 };
