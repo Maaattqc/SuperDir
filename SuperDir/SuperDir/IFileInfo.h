@@ -1,9 +1,10 @@
 #pragma once
 class IFileInfo
 {
-
 public:
-    virtual void Init(const char* aFolder, const char* aFile) = 0;
-    virtual void DisplayInformation() = 0;
+    virtual ~IFileInfo() = 0;
+
+    virtual void Init(const char* Folder, const char* File) = 0;
+    virtual void DisplayInformation() const = 0;
     virtual void RetrieveInformation() = 0;
 };

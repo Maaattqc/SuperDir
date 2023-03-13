@@ -1,9 +1,5 @@
 #include <assert.h>
-#include <stdint.h>
-#include <iomanip>
 #include <iostream>
-#include <memory.h>
-#include <stdio.h>
 #include <Windows.h>
 #include "FileInfo_CPP.h"
 #include "FileInfo_EXE.h"
@@ -52,4 +48,41 @@ IFileInfo** FindFiles(const char* Folder)
         } while (FindNextFile(Handle, &WIN32Data)); {BOOL Bool = FindClose(Handle); assert(Bool);}
     }
     return GResult;
+}
+
+void DisplayInformation(IFileInfo** Files)
+{
+    assert(Files != NULL);
+    for (unsigned int i = 0; i < 100; i++)
+    {
+        if (NULL == Files[i])
+        {
+            break; } Files[i]->DisplayInformation();
+    }
+}
+
+void RetrieveInformation(IFileInfo** Files)
+{
+    assert(Files != NULL);
+    for (unsigned int i = 0; i < 100; i++)
+    {
+        if (NULL == Files[i])
+        {
+            break; } Files[i]->RetrieveInformation();
+    }
+}
+
+void ReleaseMemory(IFileInfo** Files)
+{
+    assert(Files != NULL);
+    for (unsigned int i = 0; i < 100; i++)
+    {
+        if (NULL == Files[i])
+        {
+            break;
+        } delete Files[i];
+    }
+
+    delete[] Files;
+
 }
