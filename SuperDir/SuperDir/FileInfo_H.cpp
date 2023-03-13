@@ -1,7 +1,7 @@
 #include "FileInfo_H.h"
 #include <iostream>
 
-void FileInfo_H::DisplayInformation()
+void FileInfo_H::DisplayInformation() const
 {
     FileInfo_Text::DisplayInformation();
 

@@ -10,15 +10,15 @@ void FileInfo_Binary::DisplayInformation() const
         "Gio " };
 
     FileInfo_Base::DisplayInformation();
-    uint64_t lSize = Size;
-    unsigned int lUnit = 0;
-    for (; lUnit < 4; lUnit++)
+    uint64_t LocalSize = Size;
+    unsigned int LocalUnit = 0;
+    for (; LocalUnit < 4; LocalUnit++)
     {
-        if (1024 > lSize){
+        if (1024 > LocalSize){
             break;}
-        lSize /= 1024;
+        LocalSize /= 1024;
     }
-    std::cout << std::setw(6) << lSize << " " << UNITS[lUnit];
+    std::cout << std::setw(6) << LocalSize << " " << UNITS[LocalUnit];
 }
 
 void FileInfo_Binary::RetrieveInformation()

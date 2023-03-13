@@ -4,5 +4,5 @@
 class FileInfo_H : public FileInfo_Text {
 
 public:
-	virtual void DisplayInformation();
+	virtual void DisplayInformation() const;
 };

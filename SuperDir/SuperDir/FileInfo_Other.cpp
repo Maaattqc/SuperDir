@@ -3,7 +3,7 @@
 #include "FileInfo_Other.h"
 
 
-void FileInfo_Other::DisplayInformation()
+void FileInfo_Other::DisplayInformation() const
 {
     FileInfo_Binary::DisplayInformation();
 

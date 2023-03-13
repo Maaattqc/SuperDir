@@ -4,5 +4,5 @@
 class FileInfo_EXE : public FileInfo_Binary {
 
 public:
-	virtual void DisplayInformation();
+	virtual void DisplayInformation() const;
 };

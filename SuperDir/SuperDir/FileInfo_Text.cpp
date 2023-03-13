@@ -6,7 +6,7 @@ void FileInfo_Text::DisplayInformation() const
 {
     FileInfo_Base::DisplayInformation();
 
-    std::cout << std::setw(6) << LCount << " lignes ";
+    std::cout << std::setw(6) << LCount << " lignes \n";
 }
 
 void FileInfo_Text::RetrieveInformation()
